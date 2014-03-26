@@ -21,7 +21,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
   var classes = ["tile", "tile-bird"];
 
-  var s = Math.floor(metadata.score);
+  s = 0;
 
        if (s > 2048) classes.push("tile-super")
   else if (s > 1024) classes.push("tile-2048")
@@ -83,7 +83,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   // We can't use classlist because it somehow glitches when replacing classes
   var classes = ["tile", "tile-" + tile.value, positionClass];
 
-  if (tile.value > 2048) classes.push("tile-super");
+  if (tile.value > 5) classes.push("tile-super");
 
   this.applyClasses(wrapper, classes);
 
