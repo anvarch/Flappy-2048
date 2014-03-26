@@ -23,7 +23,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
   var s = Math.floor(metadata.score);;
   
-  this.applyClasses(this.birdobj, classes);
+  //this.applyClasses(this.birdobj, classes);
 
   var zonesize = this.gridContainer.clientHeight;
   var morepos = 0.75 * (metadata.score - s);
