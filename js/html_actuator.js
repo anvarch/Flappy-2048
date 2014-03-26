@@ -21,7 +21,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
   var classes = ["tile", "tile-bird"];
 
-  s = 0;
+  var s = Math.floor(metadata.score);;
 
        if (s > 2048) classes.push("tile-super")
   else if (s > 1024) classes.push("tile-2048")
@@ -53,7 +53,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
   this.blockobjc.style.left = (1.25 - morepos) * zonesize + "px";
   this.blockobjd.style.left = (1.25 - morepos) * zonesize + "px";
 
-  this.birdinn.textContent = s;
+  this.birdinn.textContent = 0;
 
   window.requestAnimationFrame(function () {
     self.updateScore(0);
