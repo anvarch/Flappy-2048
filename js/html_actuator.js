@@ -56,7 +56,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
   this.birdinn.textContent = s;
 
   window.requestAnimationFrame(function () {
-    self.updateScore(s);
+    self.updateScore(0);
     self.updateBestScore(Math.floor(metadata.bestScore));
   });
 };
@@ -136,7 +136,7 @@ HTMLActuator.prototype.updateScore = function (score) {
   this.score = score;
 
   if (difference > 0) {
-    this.scoreContainer.textContent = this.score;
+    this.scoreContainer.textContent = 0;
 
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
